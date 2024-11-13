@@ -34,6 +34,7 @@ public class UserController {
         log.debug("Пользователь успешно создан");
         return user;
     }
+
     @PutMapping
     public User update(@RequestBody User newUser) {
         validUser(newUser);
