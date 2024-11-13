@@ -15,7 +15,7 @@ import java.util.Map;
 @Slf4j
 public class FilmController {
     private final Map<Long, Film> films = new HashMap<>();
-    private Long filmId = 1l;
+    private Long filmId = 1L;
 
     @GetMapping
     public Collection<Film> findAll() {
