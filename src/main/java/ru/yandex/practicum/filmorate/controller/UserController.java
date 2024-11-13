@@ -18,7 +18,7 @@ import java.util.*;
 public class UserController {
     private final Map<Long, User> users = new HashMap<>();
     private final Set<String> emailSet = new HashSet<>();
-    private Long userId = 1l;
+    private Long userId = 1L;
 
     @GetMapping
     public Collection<User> findAll() {
