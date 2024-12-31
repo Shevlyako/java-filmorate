@@ -1,6 +1,7 @@
 package ru.yandex.practicum.filmorate.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import lombok.Data;
 
@@ -13,7 +14,8 @@ public class Film {
     public Long id;
     public String name;
     public String description;
-    public Integer rate;
+    @JsonIgnore
+    public Integer rate; //Колличество лайков
     public LocalDate releaseDate;
     public @JsonFormat(shape = JsonFormat.Shape.NUMBER_INT)
     Duration duration;
