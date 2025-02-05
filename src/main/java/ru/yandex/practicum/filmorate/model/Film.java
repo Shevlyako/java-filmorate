@@ -6,6 +6,7 @@ import lombok.Data;
 
 import java.time.Duration;
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @Builder
@@ -14,6 +15,8 @@ public class Film {
     public String name;
     public String description;
     public Integer rate; //Колличество лайков
+    public MpaRating mpa;
+    public List<Genre> genres;
     public LocalDate releaseDate;
     public @JsonFormat(shape = JsonFormat.Shape.NUMBER_INT)
     Duration duration;
